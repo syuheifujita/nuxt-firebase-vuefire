@@ -1,7 +1,6 @@
 # nuxt-firebase-vuefire
 - Nuxt.js, TailwindCSS, JavaScript, Firestore, Netlify
 ## Build Setup
-
 ```bash
 # install dependencies
 $ yarn install
@@ -16,8 +15,10 @@ $ yarn start
 # generate static project
 $ yarn generate
 ```
-
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+### アーキテクチャ
+![vuex](https://user-images.githubusercontent.com/38001967/105490155-b51a2880-5cf7-11eb-97c1-39b5b72c3eab.png)
 
 ### フロントエンド
 - Nuxt.js(Vue)
