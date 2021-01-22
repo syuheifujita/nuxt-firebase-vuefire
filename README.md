@@ -1,5 +1,5 @@
 # nuxt-firebase-vuefire
-
+- Nuxt.js, TailwindCSS, JavaScript, Firestore, Netlify
 ## Build Setup
 
 ```bash
@@ -24,19 +24,10 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 - 状態管理
     - Vuex
 - 実行環境
-    - Firebase Hosting or Netlify
-
-- Nuxt.js, JavaScript, Firestore, Netlify
+    - 
 
 ### バックエンド
-- Firestore(データ管理), Authentication
-- API
-    - マスターデータ
-    - サイトURL
-- 検索エンジン
-    - Algolia
-    - 対抗馬: Elastic search（こっちの方が柔軟だが、GCPでやると自前でコンテナ作って...など）
-- Amazon PA-API（アフィリエイト）
+- Firestore(データ管理)
 
 ### ライブラリ
 - vuexfire
