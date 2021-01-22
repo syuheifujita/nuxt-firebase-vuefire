@@ -37,3 +37,10 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
     - Algolia
     - 対抗馬: Elastic search（こっちの方が柔軟だが、GCPでやると自前でコンテナ作って...など）
 - Amazon PA-API（アフィリエイト）
+
+### ライブラリ
+- vuexfire
+- lodash
+- moment
+- @nuxtjs/axios
+- @nuxtjs/dotenv
