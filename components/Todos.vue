@@ -13,10 +13,10 @@
             <li v-for="todo in todos" :key="todo.id" class="text-xs">
                 <input type="checkbox" v-bind:checked="todo.done" @change="toggle(todo)">
                 <!-- todoのdoneがtrueの時、doneクラスを実行 -->
-                <span v-bind:class="{ done: todo.done }">
+                <span v-if="todo.created" v-bind:class="{ done: todo.done }">
                     {{ todo.name }}
                     {{ todo.done }}
-                    <!-- {{ todo.created }} -->
+                    {{ todo.created.toDate() | dateFilter }}
                 </span>
                 <button @click="remove(todo.id)" class="bg-gray-500 rounded-md p-2 text-white">×</button>
             </li>
@@ -25,6 +25,8 @@
 </template>
 
 <script>
+import moment from 'moment'
+
 export default {
     // ローカルで一時的に保存するdata()
     data() {
@@ -51,10 +53,15 @@ export default {
     },
     computed: {
         todos() {
-            console.log(this.$store.state.todos)
-            return this.$store.state.todos.todos
+            // return this.$store.state.todos.todos
+            return this.$store.getters['todos/orderedTodos']
         }
-    }
+    },
+    filters: {
+        dateFilter: function(date) {    //timestampの取得にラグがあるので、dateがnullになってしまう
+            return moment(date).format('YYYY/MM/DD HH:mm:ss')
+        }
+    },
 }
 </script>
 

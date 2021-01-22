@@ -1,5 +1,6 @@
 import firebase from '~/plugins/firebase'
 import { firestoreAction } from 'vuexfire'
+import _ from 'lodash';
 
 // firestoreのDBを定義
 const db = firebase.firestore()
@@ -34,4 +35,10 @@ export const actions = {
             done: !todo.done
         })
     }),
+}
+
+export const getters = {
+    orderedTodos: state => {
+        return _.sortBy(state.todos, 'created')
+    }
 }
