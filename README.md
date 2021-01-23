@@ -17,6 +17,9 @@ $ yarn generate
 ```
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
+### Deploy先（Netlify）
+https://tender-wright-7aa7cc.netlify.app/
+
 ### アーキテクチャ
 ![vuex](https://user-images.githubusercontent.com/38001967/105490155-b51a2880-5cf7-11eb-97c1-39b5b72c3eab.png)
 
